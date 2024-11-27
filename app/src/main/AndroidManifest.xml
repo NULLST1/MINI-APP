@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- sd读写权限 -->
+    <!-- 读取您的USB存储设备中的内容 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 修改或删除您的USB存储设备中的内容 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取当前位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        android:usesCleartextTraffic="true">
+      -
+
+        <activity
+            android:name=".Activity.NoteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.WebActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.OwnActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.TweetActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.FirstActivity"
+            android:exported="true" />
+
+        <service
+            android:name=".Service.MusicplayService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activity.ChangePwdActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.MusicMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.MusicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
